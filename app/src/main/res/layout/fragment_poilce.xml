@@ -7,10 +7,11 @@
 
     <!--Red Layout-->
     <LinearLayout
+        android:background="#82ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="#82ffffff"
+
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -39,6 +40,19 @@
                     android:layout_marginRight="19dp"
                     android:layout_marginTop="20dp"
                     android:src="@drawable/station1" />
+
+                <!--Title-->
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:padding="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:background="#82000000"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Station 1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             </RelativeLayout>
 
