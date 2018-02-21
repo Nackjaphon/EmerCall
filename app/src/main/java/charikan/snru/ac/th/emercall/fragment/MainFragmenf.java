@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.json.JSONObject;
+
 import java.time.Instant;
 
 import charikan.snru.ac.th.emercall.R;
@@ -56,12 +58,48 @@ public class MainFragmenf extends Fragment {
         });
 
         //        For station2
+        ImageView station2ImageView = getView().findViewById(R.id.imageViewStation2);
+        statImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation( "2222");
+
+            }
+        });
+        TextView station2TextView = getView().findViewById(R.id.textViewStation2);
+        station2ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation( "2222");
+            }
+        });
 
 
         //        For station3
+        ImageView station3ImageView = getView().findViewById(R.id.imageViewStation3);
+        statImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation( numberCall:"3333");
+
+            }
+        });
+        TextView station3TextView = getView().findViewById(R.id.textViewStation3);
+        station3ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation( numberCall:"3333");
+            }
+        });
 
 
         //        For station4
+        ImageView station4ImageView = getView().findViewById(R.id.imageViewStation4);
+        statImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation( numberCall:"3333");
+
 
 
     }  //Main Method
