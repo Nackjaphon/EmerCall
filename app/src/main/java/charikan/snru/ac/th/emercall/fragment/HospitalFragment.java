@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import charikan.snru.ac.th.emercall.R;
+import charikan.snru.ac.th.emercall.utility.HospitalAdapter;
 
 
 /**
@@ -23,7 +24,20 @@ public class HospitalFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
 
 //        Create ListView
-        ListView listView = getView().findViewById(R.id.listViewHospital);
+        ListView listView  = getView().findViewById(R.id.listViewHospital);
+
+        int[] ints = new int[]{R.drawable.station1, R.drawable.station2,
+                               R.drawable.station3, R.drawable.station4,R.drawable.station1,
+                               R.drawable.station2, R.drawable.station3,R.drawable.station4};
+
+        String[] titStrings = new String[]{"Hospital 1", "Hospital 2", "Hospital 3", "Hospital 4",
+                "Hospital 5", "Hospital 6", "Hospital 7", "Hospital 8"};
+
+        String[] phoneStrings = new String[]{"111", "1112", "1113", "1114", "1115", "1116",
+                "1117", "1118"};
+
+        HospitalAdapter hospitalAdapter = new HospitalAdapter(getActivity(), ints, titStrings, phoneStrings);
+        listView.setAdapter(hospitalAdapter);
 
 
     }   // Main Method
