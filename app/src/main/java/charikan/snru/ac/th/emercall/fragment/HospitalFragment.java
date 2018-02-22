@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import charikan.snru.ac.th.emercall.R;
 
@@ -20,7 +21,12 @@ public class HospitalFragment extends Fragment{
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-    }
+
+//        Create ListView
+        ListView listView = getView().findViewById(R.id.listViewHospital);
+
+
+    }   // Main Method
 
     @Nullable
     @Override
