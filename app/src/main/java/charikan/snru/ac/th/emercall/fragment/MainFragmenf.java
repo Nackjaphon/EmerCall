@@ -15,11 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.json.JSONObject;
-
-import java.time.Instant;
-
 import charikan.snru.ac.th.emercall.R;
+
 
 /**
  * Created by Admin on 20/2/2561.
@@ -28,16 +25,16 @@ import charikan.snru.ac.th.emercall.R;
 public class MainFragmenf extends Fragment {
 
     //    Explicit
-    private String tag = "MyTayV1";
+    private String tag = "MyTagV1";
 
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        //        For station1
-        ImageView statImageView = getView().findViewById(R.id.imageViewStation1);
-        statImageView.setOnClickListener(new View.OnClickListener() {
+        //        For Station 1
+        ImageView station1ImageView = getView().findViewById(R.id.imageViewStation1);
+        station1ImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -45,64 +42,70 @@ public class MainFragmenf extends Fragment {
                 callStation("1111");
 
             }
-
         });
 
         TextView station1TextView = getView().findViewById(R.id.textViewStation1);
         station1TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(tag, "click Text " + getString(R.string.station1));
+                Log.d(tag, "Click Text " + getString(R.string.station1));
                 callStation("1111");
             }
         });
 
-        //        For station2
-        ImageView station2ImageView = getView().findViewById(R.id.imageViewStation2);
-        statImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                callStation( "2222");
 
-            }
-        });
-        TextView station2TextView = getView().findViewById(R.id.textViewStation2);
+        //        For Station 2
+        ImageView station2ImageView = getView().findViewById(R.id.imageViewStation2);
         station2ImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                callStation( "2222");
+                callStation("2222");
+            }
+        });
+        TextView station2TextView = getView().findViewById(R.id.textViewStation2);
+        station2TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("2222");
             }
         });
 
 
-        //        For station3
+        //        For Station 3
         ImageView station3ImageView = getView().findViewById(R.id.imageViewStation3);
-        statImageView.setOnClickListener(new View.OnClickListener() {
+        station2ImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                callStation( numberCall:"3333");
-
+                callStation("3333");
             }
         });
         TextView station3TextView = getView().findViewById(R.id.textViewStation3);
-        station3ImageView.setOnClickListener(new View.OnClickListener() {
+        station2TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                callStation( numberCall:"3333");
+                callStation("3333");
+            }
+        });
+
+        //        For Station 4
+        ImageView station4ImageView = getView().findViewById(R.id.imageViewStation4);
+        station2ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("4444");
+            }
+        });
+        TextView station4TextView = getView().findViewById(R.id.textViewStation4);
+        station2TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("4444");
             }
         });
 
 
-        //        For station4
-        ImageView station4ImageView = getView().findViewById(R.id.imageViewStation4);
-        statImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                callStation( numberCall:"3333");
 
-
-
-    }  //Main Method
+    }   //Main Method
 
     public void callStation(String numberCall) {
 
@@ -120,14 +123,14 @@ public class MainFragmenf extends Fragment {
         }
         getActivity().startActivity(intent);
 
-    }  // callStation
+
+    }   // callStation
 
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_poilce, container, false);
         return view;
     }
-
-}  // Main Class
+}   // Main Class
